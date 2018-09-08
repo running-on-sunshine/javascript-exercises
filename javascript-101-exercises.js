@@ -10,11 +10,11 @@
 
 // Write a function hello which given a name, says hello to the name.
 
-var hello = function(name) {
+let hello = (name) => {
     console.log(`Hello ${name}!`);
 };
 
-var name = 'Mustache';
+let name = 'Mustache';
 
 hello(name);
 
@@ -27,7 +27,7 @@ hello(name);
 // hello(), it will print "Hello, world!", otherwise it behaves the 
 // same as previously.
 
-var hello = function(name) {
+let hello = (name) => {
     if (name === "") {
         console.log('Hello, world!');
     }
@@ -36,7 +36,7 @@ var hello = function(name) {
     };
 };
 
-var name;
+let name;
 
 hello(name);
 
@@ -49,9 +49,9 @@ hello(name);
 // It will return(not print) a new string: 
 // (name)'s favorite subject in school is (subject).
 
-var madlib = function(name, subject) {
-    var sentence = '\'s favorite subject in school is ';
-    var period = '.';
+let madlib = (name, subject) => {
+    let sentence = '\'s favorite subject in school is ';
+    let period = '.';
     return (name + sentence + subject + period);
 };
 
@@ -61,7 +61,7 @@ madlib('Anushka', 'art');
 //                    Madlib w/ String Interpolation                       //
 // ======================================================================= //
 
-var madlib = function(name, subject) {
+let madlib = (name, subject) => {
     return (`${name}'s favorite subject in school is ${subject}.`);
 };
 
@@ -79,8 +79,8 @@ madlib('Anushka', 'art');
 // fair -> 15%
 // bad -> 10%
 
-var tipAmount = function(bill, service) {
-    var tip;
+let tipAmount = (bill, service) => {
+    let tip;
 
     if (service === 'good') {
         tip = bill * 0.20;
@@ -105,7 +105,7 @@ tipAmount(40, 'fair');
 
 // Calculates the 'Total Amount' after adding the 'Tip Amount'           
 
-var totalAmount = function(bill, service) {
+let totalAmount = (bill, service) => {
     return bill + tipAmount(bill, service);
 };
 
@@ -119,7 +119,7 @@ totalAmount(40, 'fair');
 
 // Calculates the 'Split Amount' when dining with 'x' Amount of People
 
-var splitAmount = function(bill, service, people) {
+let splitAmount = (bill, service, people) => {
     return totalAmount(bill, service) / people;
 };
 
